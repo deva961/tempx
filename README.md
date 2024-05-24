@@ -31,8 +31,8 @@ git clone https://github.com/deva961/tempx.git
 
 Alternatively, you can download the repositary as a zip file and extract it.
 
-2. Install packages
-   Navigate to the downloaded folder and install the necessary packages:
+2. Install packages 
+- Navigate to the downloaded folder and install the necessary packages:
 
 ```bash
 npm install
