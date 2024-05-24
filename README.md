@@ -86,7 +86,7 @@ The home screen is the entry point to the HR CRM application.
 
 - Screen Link: `http://localhost:3000`
 - Screenshot:
-  [images/flow-1.png]
+  ![CHEESE](images/flow-1.png)
 
 ### Login Screen
 
@@ -94,7 +94,7 @@ Users can sign in to access their accounts.
 
 - Screen Link: `http://localhost:3000/sign-in`
   -Screenshot:
-  [images/flow-2.png]
+  ![CHEESE](images/flow-2.png)
 
 ### Hiring Overview
 
@@ -102,10 +102,10 @@ After signing in, users are directed to the hiring overview page.
 
 - Screen Link: `http://localhost:3000/hirings`
 - Screenshot:
-  [images/flow-3.png]
+  ![CHEESE](images/flow-3.png)
 
 - Screenshot: `http://localhost:3000/hirings`
-  [images/flow-4.png]
+  ![CHEESE](images/flow-4.png)
 
 ### Hiring Details
 
@@ -113,7 +113,7 @@ Users can view detailed information about specific hirings.
 
 - Screen Link: `http://localhost:3000/hirings/[id]`
 - Screenshot:
-  [images/flow-5.png]
+  ![CHEESE](images/flow-5.png)
 
 ## Contributing
 
