@@ -46,7 +46,7 @@ cp .env.local .env
 ```
 
 4. Obtain API Keys
-   Visit the websites for MongoDB, Clerk, and Resend to obtain your private keys. Update your .env file with the following content:
+   Visit the websites for MongoDB, Clerk, Uploadthing, and Resend to obtain your private keys. Update your .env file with the following content:
 
 ```bash
 DATABASE_URL=********
