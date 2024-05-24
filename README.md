@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# HR CRM / CRM for Human Resources
+
+Web Application
 
 ## Getting Started
 
-First, run the development server:
+This guide will walk you through setting up and running the HR CRM web application. The project is built and validated using the following technologies:
+
+- Next.js (v.14.2.3)
+- React (v.18)
+- Resend (v.3.2)
+- Uploadthing (v.6.5.4)
+- shadcn /ui
+- clerk/nextjs (v.5.1.2)
+
+## Prerequisites
+
+Ensure you have the following software installed on your machine:
+
+- Node.js (v.16 or higher)
+- npm (v.8 or higher)
+- Git
+
+## Setup
+
+1. Clone the repository using the following command:
+
+```bash
+git clone https://github.com/deva961/tempx.git
+```
+
+Alternatively, you can download the repositary as a zip file and extract it.
+
+2. Install packages
+   Navigate to the downloaded folder and install the necessary packages:
+
+```bash
+npm install
+```
+
+3. Configure Environment Variables
+   Copy the `.env.local` file to `.env`:
+
+```bash
+cp .env.local .env
+```
+
+4. Obtain API Keys
+   Visit the websites for MongoDB, Clerk, and Resend to obtain your private keys. Update your .env file with the following content:
+
+```bash
+DATABASE_URL=********
+UPLOADTHING_SECRET=**********
+UPLOADTHING_APP_ID=******
+RESEND_API_KEY=*****
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=*****
+CLERK_SECRET_KEY=******
+
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/hirings
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/hirings
+```
+
+5. Generate Prisma Client
+   Generate the Prisma client and push the database schema:
+
+```bash
+npx prisma generate
+npx prisma db push
+```
+
+6. Start the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser and navigate to `http://localhost:3000` to access the landing page.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Work Flow / Screen Flow
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Home Screen
 
-## Learn More
+The home screen is the entry point to the HR CRM application.
 
-To learn more about Next.js, take a look at the following resources:
+- Screen Link: `http://localhost:3000`
+- Screenshot:
+  [images/flow-1.png]
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Login Screen
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Users can sign in to access their accounts.
 
-## Deploy on Vercel
+- Screen Link: `http://localhost:3000/sign-in`
+  -Screenshot:
+  [images/flow-2.png]
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Hiring Overview
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+After signing in, users are directed to the hiring overview page.
+
+- Screen Link: `http://localhost:3000/hirings`
+- Screenshot:
+  [images/flow-3.png]
+
+- Screenshot: `http://localhost:3000/hirings`
+  [images/flow-4.png]
+
+### Hiring Details
+
+Users can view detailed information about specific hirings.
+
+- Screen Link: `http://localhost:3000/hirings/[id]`
+- Screenshot:
+  [images/flow-5.png]
+
+## Contributing
+
+We welcome contributions! Please fork the repository and submit a pull request with any improvements or fixes.
