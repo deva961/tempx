@@ -38,12 +38,8 @@ Alternatively, you can download the repositary as a zip file and extract it.
 npm install
 ```
 
-3. Configure Environment Variables
-   Copy the `.env.local` file to `.env`:
-
-```bash
-cp .env.local .env
-```
+3. Create an Environment Variables file:
+- Create `.env` file:
 
 4. Obtain API Keys
    Visit the websites for MongoDB, Clerk, Uploadthing, and Resend to obtain your private keys. Update your .env file with the following content:
